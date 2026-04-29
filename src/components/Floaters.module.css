@@ -1,0 +1,24 @@
+.floaters {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floater {
+  position: absolute;
+  font-family: var(--font-mono);
+  color: var(--react);
+  opacity: 0;
+  animation: floatUp var(--dur, 30s) var(--delay, 0s) infinite linear;
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+}
+
+@keyframes floatUp {
+  0%   { opacity: 0; transform: translateY(20px); }
+  10%  { opacity: var(--peak, 0.1); }
+  80%  { opacity: var(--peak, 0.1); }
+  100% { opacity: 0; transform: translateY(-120px); }
+}

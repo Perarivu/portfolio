@@ -1,0 +1,75 @@
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.item {
+  padding-left: 32px;
+  padding-bottom: 48px;
+  position: relative;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--react);
+  box-shadow: 0 0 12px rgba(97, 218, 251, 0.5);
+}
+
+.date {
+  font-size: 11px;
+  color: var(--react);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.role {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bullets li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.7;
+}
+
+.bullets li::before {
+  content: '▸';
+  color: var(--react);
+  flex-shrink: 0;
+  margin-top: 1px;
+}

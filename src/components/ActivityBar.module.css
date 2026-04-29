@@ -1,0 +1,47 @@
+.activityBar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: var(--status-h);
+  width: 48px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  gap: 4px;
+}
+
+.actIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--muted);
+  background: none;
+  border: none;
+  transition: color 0.2s, background 0.2s;
+  font-size: 18px;
+  position: relative;
+}
+
+.actIcon:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+.spacer {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .activityBar {
+    width: 0;
+    overflow: hidden;
+  }
+}
