@@ -34,7 +34,7 @@ export default function Hero() {
           <button className="btn-primary" onClick={() => scrollToSection('#projects')}>
             &lt;ViewWork /&gt;
           </button>
-          <a href="mailto:Perarivu2516@gmail.com" className="btn-ghost">
+          <a href="mailto:perarivu250@gmail.com" className="btn-ghost">
             $ send --message
           </a>
           <a href="/resume.pdf" download="Perarivu-Resume.pdf" className="btn-ghost">
