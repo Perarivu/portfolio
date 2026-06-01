@@ -161,3 +161,7 @@ section {
     margin-bottom: calc(var(--status-h) + 52px); /* status bar + bottom nav */
   }
 }
+
+._sidebar_q11ro_1{
+  display:none !important;
+}
