@@ -41,7 +41,18 @@
 
 @media (max-width: 600px) {
   .activityBar {
-    width: 0;
-    overflow: hidden;
+    width: 100%;
+    height: 52px;
+    top: auto;
+    bottom: calc(var(--status-h));
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 8px;
+    border-right: none;
+    border-top: 1px solid var(--border);
   }
+
+  .spacer { display: none; }
 }

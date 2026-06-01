@@ -45,3 +45,7 @@
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 600px) {
+  .codeBlock { font-size: 0.7rem; padding: 14px; }
+}

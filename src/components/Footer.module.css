@@ -9,3 +9,11 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 16px 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+}

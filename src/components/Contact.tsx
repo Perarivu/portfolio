@@ -30,7 +30,7 @@ export default function Contact() {
           <div className={styles.output}>
             {'{'}<br />
             &nbsp;&nbsp;"email":&nbsp;
-            <a className={styles.link} href="mailto:Perarivu2516@gmail.com">
+            <a className={styles.link} href="https://mail.google.com/mail/?view=cm&to=Perarivu2516@gmail.com" target="_blank" rel="noreferrer">
               "Perarivu2516@gmail.com"
             </a>,<br />
             &nbsp;&nbsp;"github":&nbsp;
@@ -56,7 +56,7 @@ export default function Contact() {
       </div>
 
       <div className={styles.socials}>
-        <a className={styles.socBtn} href="mailto:Perarivu2516@gmail.com">✉ Email me</a>
+        <a className={styles.socBtn} href="https://mail.google.com/mail/?view=cm&to=Perarivu2516@gmail.com" target="_blank" rel="noreferrer">✉ Email me</a>
         <a className={styles.socBtn} href="https://github.com/Perarivu" target="_blank" rel="noreferrer">⌥ GitHub</a>
         <a className={styles.socBtn} href="https://www.linkedin.com/in/perarivuv" target="_blank" rel="noreferrer">in LinkedIn</a>
         <a className={styles.socBtn} href="/resume.pdf" download="Perarivu-Resume.pdf">↓ Resume</a>

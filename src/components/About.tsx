@@ -24,7 +24,7 @@ export default function About() {
             code, and coffee. Always looking for the next interesting build.
           </p>
           <div style={{ marginTop: '24px' }}>
-            <a href="mailto:Perarivu2516@gmail.com" className="btn-primary">
+            <a href="https://mail.google.com/mail/?view=cm&to=Perarivu2516@gmail.com" target="_blank" rel="noreferrer" className="btn-primary">
               &lt;HireMe email="Perarivu2516@gmail.com" /&gt;
             </a>
           </div>
