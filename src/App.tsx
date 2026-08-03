@@ -1,37 +1,43 @@
-import ActivityBar  from './components/ActivityBar';
-import Sidebar      from './components/Sidebar';
-import Tabs         from './components/Tabs';
-import BgCanvas     from './components/BgCanvas';
-import Floaters     from './components/Floaters';
-import StatusBar    from './components/StatusBar';
-import Hero         from './components/Hero';
-import About        from './components/About';
-import Skills       from './components/Skills';
-import Experience   from './components/Experience';
-import Projects     from './components/Projects';
-import Contact      from './components/Contact';
-import Footer       from './components/Footer';
+import './globals.css';
+import Cursor from './components/Cursor/Cursor';
+import FallingDots from './components/FallingDots/FallingDots';
+import Nav from './components/Nav/Nav';
+import Reveal from './components/Reveal/Reveals';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
     <>
-      <BgCanvas />
-      <Floaters />
-      <ActivityBar />
-      <Sidebar />
-
+      <FallingDots />
+      <Cursor />
+      <Nav />
       <main className="main">
-        <Tabs />
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Reveal>
+          <Hero />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
-
-      <StatusBar />
+      <Footer />
     </>
   );
 }

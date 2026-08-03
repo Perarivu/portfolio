@@ -1,0 +1,180 @@
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  border-bottom: 1px solid var(--hair);
+  position: relative;
+}
+
+/* Right-side vertical stats rail, styled after the reference: big
+   accent-colored numbers stacked with generous vertical gaps, pinned
+   to the section's edge. Desktop only — see mobile fallback below. */
+.statsRail {
+  position: absolute;
+  right: var(--gutter);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.railItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.railNum {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.railLabel {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* Mobile fallback: the absolutely-positioned rail doesn't work on
+   narrow screens, so it's hidden and this inline row takes over. */
+.stats {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .statsRail { display: none; }
+  .stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.copy {
+  flex: 1;
+  min-width: 0;
+  max-width: 640px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.4rem, 9vw, 7.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* Rotating role carousel, in place of the old static tagline */
+.carousel {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+  height: 1.4em;
+  overflow: hidden;
+}
+
+.carouselPrefix {
+  color: var(--ink-faint);
+}
+
+.carouselWord {
+  color: var(--accent);
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.4s ease;
+}
+
+.carouselWord.leaving {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.carouselWord.entering {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nameAccent {
+  color: var(--accent);
+}
+
+.bio {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.bio strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.statItem {
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 600px) {
+  .hero { padding-top: 12px; }
+  .cta { margin-bottom: 40px; }
+}

@@ -1,0 +1,46 @@
+.dot,
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  mix-blend-mode: difference;
+}
+
+.dot {
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  background: var(--accent-ink, #fff);
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  width: var(--cursor-ring);
+  height: var(--cursor-ring);
+  border: 1px solid var(--accent-ink, #fff);
+  background: transparent;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, opacity 0.25s ease, border-width 0.25s ease;
+}
+
+.ring.hovering {
+  width: 64px;
+  height: 64px;
+  border-width: 1px;
+}
+
+.dot.hovering {
+  opacity: 0;
+}
+
+.ring.clicking {
+  width: 30px;
+  height: 30px;
+}
+
+.hidden {
+  opacity: 0;
+}
