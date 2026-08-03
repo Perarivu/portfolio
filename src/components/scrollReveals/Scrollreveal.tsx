@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
-import styles from './ScrollReveal.module.css';
+import styles from './Scrollreveal.module.css';
 
 function clamp(n: number, min: number, max: number) {
   return Math.min(max, Math.max(min, n));
 }
 
-interface ScrollRevealProps {
+interface ScrollRevealProps { 
   text: string;
   className?: string;
 }
